@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            height: 100vh;
+            width: 100vw;
+
+        }
+        nav{
+            height: 3.5rem;
+            width: 100%;
+            background-color: #0055ff;
+            padding-inline: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        form{
+            height: 400px;
+            width: 400px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+        }
+        input{
+            height: 2.5rem;
+            width: 100%;
+            border: 1px solid gainsboro;
+            padding-inline: 10px;
+        }
+        .btn{
+            height: 2rem;
+            width: max-content;
+            background-color: #0055ff;
+            padding-inline: 7px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+        .user{
+            margin: 30px;
+        }
+        .user h3,.user h4{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <h2> <a href="/"> Sachin Yadav </a></h2>
+            <h3> <a href="/login"> Login </a> &nbsp; <a href="/logout">Logout</a></h3>
+        </nav>
+        <div class="user">
+            <h3><%=user.name%></h3>
+            <h4><%=user.email%></h4>
+        </div>
+    </div>
+</body>
+</html>

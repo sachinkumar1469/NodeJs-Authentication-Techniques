@@ -4,11 +4,11 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
-const customPassport = require('../passport');
+const customPassport = require('./passport');
 
 console.log('index js file is executing');
 
-const userModel = require('../model/UserModel');
+const userModel = require('./model/UserModel');
 
 const MongoDBStore = require('connect-mongodb-session')(session);
 
@@ -33,8 +33,8 @@ mongoose.connect('mongodb+srv://sachinyadav1469:Sachin%40123@cluster0.my3twen.mo
         })
 
 
-const loginRouter = require('../routes/loginRoutes');
-const singupRouter = require('../routes/singupRotes');
+const loginRouter = require('./routes/loginRoutes');
+const singupRouter = require('./routes/singupRotes');
 
 
 
